@@ -1,17 +1,20 @@
 package com.transoft.aircrafteditor.ui;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
 public class AircraftEditor extends JFrame {
 
-    private JPanel contentPane;
+    private BaseContentPane contentPane = new BaseContentPane();
 
     public AircraftEditor() {
+   
         this.setTitle("Aircraft Editor");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(new BaseContentPane());
+        this.setContentPane(contentPane);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
     }
+    
+    
 }

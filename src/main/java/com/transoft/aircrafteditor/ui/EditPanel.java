@@ -1,11 +1,16 @@
 package com.transoft.aircrafteditor.ui;
 
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
 import com.transoft.aircrafteditor.action.DrawAircraftAction;
 import com.transoft.aircrafteditor.domain.Aircraft;
-
-import javax.swing.*;
-import java.awt.*;
 
 public class EditPanel extends JPanel {
 
@@ -21,7 +26,7 @@ public class EditPanel extends JPanel {
     public EditPanel() {
         this.setLayout(new BorderLayout());
         this.setBackground(Color.WHITE);
-        this.setPreferredSize(new Dimension(380, 580));
+        this.setSize(new Dimension(380, 580));
         this.setBounds(5, 5, 375, 575);
         addComponents();
     }

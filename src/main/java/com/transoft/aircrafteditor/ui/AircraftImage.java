@@ -1,9 +1,12 @@
 package com.transoft.aircrafteditor.ui;
 
-import com.transoft.aircrafteditor.domain.Aircraft;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+
+import com.transoft.aircrafteditor.domain.Aircraft;
 
 public class AircraftImage extends JPanel {
 
@@ -18,8 +21,8 @@ public class AircraftImage extends JPanel {
     protected void paintComponent(Graphics g) {
         if (aircraft != null) {
             super.paintComponent(g);
-            int centerWidth = this.getPreferredSize().width / 2;
-            int centerHeight = this.getPreferredSize().height / 2;
+            int centerWidth = this.getSize().width / 2;
+            int centerHeight = this.getSize().height / 2;
             g.setColor(Color.BLACK);
             g.drawLine(centerWidth, centerHeight - aircraft.getLength() / 2, centerWidth, centerHeight + aircraft.getLength() / 2);
             g.drawLine(centerWidth - aircraft.getWidth() / 2, centerHeight - aircraft.getLength() / 4, centerWidth + aircraft.getWidth() / 2, centerHeight - aircraft.getLength() / 4);

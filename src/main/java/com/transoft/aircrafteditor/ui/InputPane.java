@@ -1,7 +1,11 @@
 package com.transoft.aircrafteditor.ui;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class InputPane extends JPanel {
 
