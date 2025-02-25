@@ -1,0 +1,43 @@
+plugins {
+    id 'jacoco'
+    id 'application'
+
+}
+group = ''
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+jacoco {
+    toolVersion = "[0.8,0.9)"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+test {
+    systemProperty("spring.profiles.active", "test")
+    useJUnitPlatform {
+        includeEngines 'junit-jupiter'
+    }
+
+
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        csv.required = false
+        html.outputLocation = file("${buildDir}/jacoco/jacoco.html")
+        xml.outputLocation = file("${buildDir}/jacoco/jacoco.xml")
+    }
+}
+
+
